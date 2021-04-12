@@ -10,7 +10,7 @@
 -- Casting Time: 0.5 seconds
 -- Recast Time: 25.5 seconds
 -- Skillchain Element: Fusion / Impaction
--- Combos: None
+-- Combos: Skillchain Bonus
 -----------------------------------
 require("scripts/globals/bluemagic")
 require("scripts/globals/status")
