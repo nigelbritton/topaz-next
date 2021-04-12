@@ -1,5 +1,5 @@
 -----------------------------------
--- Spell: Goblin Rush
+-- Spell: Goblin Rush 
 -- Delivers a threefold attack. Damage varies with TP
 -- Spell cost: 76 MP
 -- Monster Type: Goblin
