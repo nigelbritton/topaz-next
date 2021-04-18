@@ -90,6 +90,8 @@ zone_object.onRegionEnter = function(player, region)
                     player:startEvent(123)
                 end
             end
+        elseif player:getCurrentMission(ROV) == tpz.mission.id.rov.CRASHING_WAVES and player:getCurrentMission(COP) == tpz.mission.id.COP.A_VESSEL_WITHOUT_A_CAPTAIN) then
+            player:startEvent(10046)
         end
     end
 end
@@ -167,6 +169,10 @@ zone_object.onEventFinish = function(player, csid, option)
         player:addQuest(tpz.quest.log_id.JEUNO, tpz.quest.id.jeuno.APOCALYPSE_NIGH)
         player:setCharVar('ApocalypseNigh', 1)
         player:setCharVar("ApocNighWait", 0)
+    elseif csid == 10046 then
+        player:completeMission(tpz.mission.log_id.rov, tpz.mission.id.rov.CRASHING_WAVES)
+        player:addMission(tpz.mission.log_id.rov, tpz.mission.id.rov.CALL_TO_SERVE)
+        player:addItem(12720)
     end
 end
 
