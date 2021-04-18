@@ -32,6 +32,8 @@ end
 entity.onEventFinish = function(player, csid, option)
     if csid == 10120 and option == 1 then -- teleport
         player:setPos(172, 0.3, -21, 211, tpz.zone.CEIZAK_BATTLEGROUNDS)
+    elseif csid == 10121 and option == 1 then
+        player:setPos(172, 0.3, -21, 211, tpz.zone.CEIZAK_BATTLEGROUNDS)
     end
 end
 
