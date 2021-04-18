@@ -90,7 +90,7 @@ zone_object.onRegionEnter = function(player, region)
                     player:startEvent(123)
                 end
             end
-        elseif player:getCurrentMission(ROV) == tpz.mission.id.rov.CRASHING_WAVES and player:getCurrentMission(COP) == tpz.mission.id.COP.A_VESSEL_WITHOUT_A_CAPTAIN) then
+        elseif player:getCurrentMission(ROV) == tpz.mission.id.rov.CRASHING_WAVES and player:getCurrentMission(COP) >= tpz.mission.id.COP.A_VESSEL_WITHOUT_A_CAPTAIN) then
             player:startEvent(10046)
         end
     end
