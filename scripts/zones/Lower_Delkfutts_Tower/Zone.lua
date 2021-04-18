@@ -32,6 +32,8 @@ zone_object.onZoneIn = function(player, prevZone)
         cs = 22
     elseif player:getCurrentMission(ACP) == tpz.mission.id.acp.BORN_OF_HER_NIGHTMARES and prevZone == tpz.zone.QUFIM_ISLAND then
         cs = 34
+    elseif player:getCurrentMission(ROV) == tpz.mission.id.rov.SPIRITS_AWOKEN and prevZone == tpz.zone.QUFIM_ISLAND and player:hasCompletedMission(tpz.mission.log_id.COP, tpz.mission.id.COP.THE_CALL_OF_THE_WYRMKING) then
+        cs = 25
     end
 
     return cs
@@ -84,6 +86,9 @@ zone_object.onEventFinish = function(player, csid, option)
         player:completeMission(tpz.mission.log_id.COP, tpz.mission.id.cop.ANCIENT_FLAMES_BECKON)
         player:addMission(tpz.mission.log_id.COP, tpz.mission.id.cop.THE_RITES_OF_LIFE)
         player:setCharVar("COP1", 1)
+    elseif csid == 25 then
+        player:completeMission(tpz.mission.log_id.rov, tpz.mission.id.rov.SPIRITS_AWOKEN)
+        player:addMission(tpz.mission.log_id.rov, tpz.mission.id.rov.CRASHING_WAVES)
     end
 end
 
