@@ -48,6 +48,14 @@ zone_object.onZoneIn = function(player, prevZone)
         cs = 3220
     end
 
+    -- super hack to get keyitem; while ROV missions in dev
+    if
+        player:getCurrentMission(ROV) >= tpz.mission.id.rov.CRASHING_WAVES and
+        not player:hasKeyItem(tpz.ki.RHAPSODY_IN_CRIMSON)
+    then
+        player:addKeyItem(tpz.ki.RHAPSODY_IN_CRIMSON)
+    end
+
     return cs
 end
 
