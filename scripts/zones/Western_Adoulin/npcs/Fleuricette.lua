@@ -15,7 +15,9 @@ entity.onTrade = function(player, npc, trade)
 end
 
 entity.onTrigger = function(player, npc)
+    local SOA_Mission = player:getCurrentMission(SOA)
     local bayld = player:getCurrency("bayld");
+
     if SOA_Mission >= tpz.mission.id.soa.ONWARD_TO_ADOULIN and player:hasKeyItem(tpz.ki.PIONEERS_BADGE) then
         player:startEvent(1201, bayld)
     else
